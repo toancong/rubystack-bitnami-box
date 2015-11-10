@@ -6,7 +6,7 @@ Vagrant.configure('2') do |config|
   # config.vm.box_url  = "http://192.168.1.121/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.gui = true
+    # vb.gui = true
     vb.memory = 2048
     # vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/projects", "1"]
   end
