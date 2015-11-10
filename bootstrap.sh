@@ -2,6 +2,10 @@
 
 echo "Starting provisioning"
 
+# Stop if we install ready
+test -d /opt/rubystack-2.2.3-2 &&
+{ echo "rubystack already installed. Provisioning completed."; exit 0; }
+
 
 apt-get -y install build-essential
 
@@ -12,6 +16,7 @@ wget https://bitnami.com/redirect/to/74445/bitnami-rubystack-2.2.3-2-dev-linux-x
                     -O /vagrant/bitnami-rubystack-2.2.3-2-dev-linux-x64-installer.run
 # wget http://192.168.1.121/bitnami-rubystack-2.2.3-2-dev-linux-x64-installer.run \
 #                     -O /vagrant/bitnami-rubystack-2.2.3-2-dev-linux-x64-installer.run
+
 
 echo "Running rubystack installer. It can take many minutes to install."
 /vagrant/bitnami-rubystack-2.2.3-2-dev-linux-x64-installer.run \
