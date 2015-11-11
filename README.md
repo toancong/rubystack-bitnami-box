@@ -76,7 +76,7 @@ vagrant@localhost:~/app$ rails server -b 0.0.0.0
 [2015-11-11 03:27:21] INFO  ruby 2.2.3 (2015-08-18) [x86_64-linux]
 [2015-11-11 03:27:21] INFO  WEBrick::HTTPServer#start: pid=21530 port=3000
 ```
-In your browser, go to http://127.0.0.1:300 to see example site from Ruby on Rails.
+In your browser, go to http://127.0.0.1:3000 to see example site from Ruby on Rails.
 
 Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer. Be sure the web server is bound to the IP 0.0.0.0, instead of 127.0.0.1, so it can access all interfaces:
 ```
