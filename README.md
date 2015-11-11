@@ -37,7 +37,7 @@ Bitnami Ruby Stack 2.2.3-2 Dev (64-bit) ships with the following:
 Building the virtual machine is easy:
 ```
 host $ git clone https://github.com/toancong/rubystack-bitnami-box
-host $ cd rails-dev-box
+host $ cd rubystack-bitnami-box
 host $ vagrant up
 ```
 
