@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Exit on error
+set -e
 echo "Starting provisioning"
 
 # Stop if we install ready
@@ -7,7 +9,9 @@ test -d /opt/rubystack-2.2.3-2 &&
 { echo "rubystack already installed. Provisioning completed."; exit 0; }
 
 
+echo "Installing dependencies packages"
 apt-get -y install build-essential
+apt-get -y install libxml2 libxml2-dev libxslt1-dev zlib1g-dev libsqlite3-dev
 
 
 # REM this section if you had an installer ready in root folder.
